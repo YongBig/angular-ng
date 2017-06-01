@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0"/>
+    <title>angular登陆</title>
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap-3.3.5/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/screenCss.css">
+</head>
+<body>
+<header>
+</header>
+<div class="box">
+    <div class="login-box">
+        <div class="login-title text-center">
+            <h1>
+                <a href="javascript:void(0);" style="vertical-align:middle;display: inline-block;width: 100px;border:1px solid #dddddd;" >图片</a><small>登陆</small>
+            </h1>
+        </div>
+        <div class="login-content ">
+            <form class="form" onsubmit="return false" id="form">
+                <div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <!--已做验证只能输入英文-->
+                                <input type="text" style="ime-mode:disabled" id="username" name="username"  onkeyup="this.value=this.value.replace(/[^a-zA-Z]+/g, '');"  class="form-control" placeholder="用户名" maxlength="16">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12  ">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="密码">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12  ">
+                            <label>
+                                <input id='rem'type="checkbox"><span> :记住密码</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group form-actions">
+                        <div class="col-xs-12 text-center">
+                            <button id='login' type="button" class="btn btn-sm btn-info ">
+                                <span class="glyphicon glyphicon-off"></span> 登录
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 link">
+                            <p id='message'class="text-center text-danger remove-margin fade">您输入的账号或密码不正确，请重新输入</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="framework/jquery-1.11.3.js"></script>
+<script src="js/lgscreen.js"></script>
+</body>
+</html>
